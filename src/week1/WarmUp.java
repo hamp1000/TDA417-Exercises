@@ -1,17 +1,10 @@
 package week1;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 public class WarmUp {
 
-    public static void main(String[] args) {
-        //revertTest();
-        //palindromeTest();
-        dynamicArrayTest();
-    }
-
-    private static void dynamicArrayTest() {
+    public void dynamicArrayTest() {
         Integer[] intArray = {1, 2, 3, 4, 5, 6,};
         DynamicArray<Integer> dynamicArray = new DynamicArray<>(intArray);
         System.out.println(Arrays.toString(dynamicArray.getArray()));
@@ -20,13 +13,13 @@ public class WarmUp {
 
     }
 
-    private static void palindromeTest() {
+    public void palindromeTest() {
         System.out.println(Boolean.toString(isPalindrome("madamimadam")));
         System.out.println(Boolean.toString(isPalindrome("madaamimadam")));
 
     }
 
-    private static void revertTest() {
+    public void revertTest() {
         Integer[] intArray = {1, 2, 3, 4, 5, 6,};
         String[] stringArray = {"a", "b", "c", "d"};
 
@@ -44,7 +37,7 @@ public class WarmUp {
      * @param array is the array we wanted reverted.
      * @return the array reverted.
      */
-    private static <T> T[] revers(T[] array) {
+    private  <T> T[] revers(T[] array) {
         int size = array.length;
         T[] returnArray = (T[]) (new Object[size]);
 
@@ -60,7 +53,7 @@ public class WarmUp {
      * @param string that is checked.
      * @return true if the string is palindrome.
      */
-    private static Boolean isPalindrome(String string) {
+    private  Boolean isPalindrome(String string) {
         //TODO: Do harder version.
         for (int i = 0; i < string.length(); i++) {
             if (string.charAt(string.length() - i - 1) != string.charAt(i)) {
@@ -98,7 +91,7 @@ public class WarmUp {
             array[index] = object;
         }
 
-        public A[] getArray() {
+        A[] getArray() {
             return array;
         }
     }
